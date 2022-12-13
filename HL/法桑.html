@@ -1,0 +1,276 @@
+<html>
+    <head>
+        <title>ルシファーHL</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <audio src="法桑/Zero ゼロ.mp3" autoplay="true" loop="true"></audio>
+        <style>
+            @import "jb.css";
+        </style>
+    </head>
+    <body>
+        <button><a href="https://gbf-counter.herokuapp.com/HL.html">上一頁</a></button>
+        <p id="name">ルシファー</p>
+        <p>6人本</p>
+        <img src="法桑/fs1.jpg">
+        <br>
+        <p>特動表</p>
+        <p>被動效果</p>
+        <table border=1>
+            <tr>
+                <td>福音の赫刃</td>
+                <td>對應赫刃Lv增加敵人的攻擊性能<br>•Lv1以上:攻擊力上升<br>•Lv2以上:DA機率上升<br>•Lv3以上:普攻付加驅散1個強化效果<br>•Lv4以上:所有傷害必定為克制屬性傷害<br>•Lv5以上:無視全屬性cut盾<br><font color=red>#敵人本體發動特動時Lv+1<br>#敵人本體被驅散時Lv-1</font></td>
+            </tr>
+            <tr>
+                <td>福音の黒翼</td>
+                <td>依據參戰者職業種類數減少我方造成的傷害<br>每回合回復敵方HP<br><font color="red">#無法消除</font></td>
+            </tr>
+        </table>
+        <p>CT特動</p>
+        <table border="1">
+            <tr>
+                <td rowspan="5">本體</td>
+                <td rowspan="2">HP100%~試煉開始前</td>
+                <td>通常</td>
+                <td>ポースポロス</td>
+                <td>對我方攻擊力最高的角色造成1次大傷害<br>消除目標所有強化效果</td>
+            </tr>
+            <tr>
+                <td>OD</td>
+                <td>イブリース</td>
+                <td>對我方隨機對象造成2次3000多段傷害+2次3W傷害<br>賦予我方全體1~3T以下效果<br>•恐怖<br>•裂傷(傷害等同於最大HP10%)<br>•無法行動</td>
+            </tr>
+            <tr>
+                <td>試煉開始後~翅膀死亡前</td>
+                <td bgcolor="black"></td>
+                <td>アキシオン･アポカリプス</td>
+                <td>對我方隨機對象造成3次約3W傷害<br>赫刃Lv+1<br>依據赫刃Lv追加效果<br>•Lv2:敵方本體回復一個弱體效果<br>•Lv3:消除我方全體所有強化效果<br>•Lv4:對我方全體追加1W無屬性傷害<br>•Lv5:我方全體最大HP降低20%(累積)</td>
+            </tr>
+            <tr>
+                <td rowspan="2">翅膀死亡後</td>
+                <td>通常</td>
+                <td>ポースポロス</td>
+                <td>對我方當前HP最低(HP相同則改為ATK最高)的角色造成1次大傷害<br>消除目標所有強化效果</td>
+            </tr>
+            <tr>
+                <td>OD</td>
+                <td>オービタル･ブラック</td>
+                <td>對我方隨機對象造成3次傷害<br>賦予我方全體5T暈影效果(無法消除)<br>依據未解除的試煉追加效果<br>試煉Ⅷ:我方全體攻擊技能(紅技)CD+2<br>試煉Ⅸ:我方全體回復技能(綠技)CD+2<br>試煉Ⅹ:我方全體弱體技能(藍技)CD+2<br>試煉Ⅺ:我方全體強化技能(黃技)CD+2</td></tr>
+            </tr>
+            <tr>
+                <td>本體+翅膀</td>
+                <td bgcolor="black"></td>
+                <td>OD</td>
+                <td>パラダイス･ロスト</td>
+                <td>對我方全體造成8~9W隨機屬性傷害(無視cut盾)<br>目標死亡追加無法復活效果</td>
+            </tr>
+            <tr>
+                <td rowspan="4">翅膀</td>
+                <td rowspan="2">HP100%~51%</td>
+                <td>奇數T</td>
+                <td>マルス</td>
+                <td>對我方全體造成暗屬性傷害<br>消除敵方本體的福音の黒翼效果<br>賦予我方全體2T禁断の果実效果(1次)</td>
+            </tr>
+            <tr>
+                <td>偶數T</td>
+                <td>フィークス</td>
+                <td>對我方全體造成暗屬性傷害<br>賦予敵方本體福音の黒翼效果<br>賦予我方全體2T生命の果実效果(1次)</td>
+            </tr>
+            <tr>
+                <td rowspan="2">HP50%以下</td>
+                <td>奇數T</td>
+                <td>マルス</td>
+                <td>對我方全體造成暗屬性傷害<br>消除敵方本體的福音の黒翼效果<br>賦予我方全體2T禁断の果実效果(1次)<br>賦予我方全體2~3T攻擊力下降</td>
+            </tr>
+            <tr>
+                <td>偶數T</td>
+                <td>フィークス</td>
+                <td>對我方全體造成暗屬性傷害<br>賦予我方全體2T生命の果実效果(1次)<br>賦予我方全體2T亡靈效果<br>└受到的HP回復轉為傷害</td>
+            </tr>
+            <tr>
+                <td colspan="2">禁断の果実</td>
+                <td colspan="3">奧義傷害大幅上升<br>發動奧義受到1W無屬性傷害</td>
+            </tr>
+            <tr>
+                <td colspan="2">生命の果実</td>
+                <td colspan="3">使用技能回復我方全體4000HP，敵方本體回復100W</td>
+            </tr>
+        </table>
+        <p>HP特動</p>
+        <table border="1">
+            <tr>
+                <td bgcolor="black"></td>
+                <td colspan="4">本體</td>
+                <td colspan="2">翅膀</td>
+            </tr>
+            <tr>
+                <td bgcolor="black"></td>
+                <td colspan="2">翅膀存活</td>
+                <td colspan="2">翅膀死亡</td>
+                <td colspan="2" bgcolor="black"></td>
+            </tr>
+            <tr>
+                <td>100%</td>'
+                <td>パラダイス･ロスト</td>
+                <td colspan="2">對我方全體造成3W無屬性傷害<br>賦予敵方本體福音の黒翼效果<br>賦予我方全體3T以下弱體效果<br>•無法復活<br>•無法召喚</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>95%</td>
+                <td>ポースポロス</td>
+                <td colspan="2">對我方攻擊力最高的角色造成隨機屬性18倍傷害<br>消除目標所有強化效果</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>85%</td>
+                <td>アキシオン</td>
+                <td colspan="2">對我方當前HP最低(HP相同則改為ATK最高)的角色造成3次隨機屬性傷害<br>目標死亡對我方全體追加3W無屬性傷害</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>75%</td>
+                <td>無神論</td>
+                <td>清除敵人所有弱體效果<br>並賦予敵方5分鐘絕對否定效果及永遠拒絕效果</td>
+                <td>無</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td colspan="2">絕對否定</td>
+                <td colspan="5">隨機選擇一種屬性，敵方本體受到其餘屬性傷害時，傷害cut50<br><font color="red">#敵方本體1T內受到指定屬性1000萬傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">永遠拒絕</td>
+                <td colspan="5">隨機選擇一種屬性，其餘屬性對敵方本體的弱體效果皆無效<br><font color="red">#敵方本體存在6個弱體效果時解除</font></td>
+            </tr>
+            <tr>
+                <td>70%</td>
+                <td colspan="4">敵方本體滿CT</td>
+                <td>セフィロト</td>
+                <td>回復敵方全部弱體效果<br>消除我方全部強化效果<br>賦予敵方本體終末へのカウントダウン效果</td>
+            </tr>
+            <tr>
+                <td colspan="2">終末へのカウントダウン</td>
+                <td colspan="5">我方有人死亡時，計數器-1，計數器為0時，發動ジ･エンド<br>└全體參戰者全部角色死亡(包含後排)</td>
+            </tr>
+            <tr>
+                <td>60%</td>
+                <td>アキシオン</td>
+                <td colspan="2">對我方全體造成3次隨機屬性3倍傷害<br>目標死亡對我方全體追加3W無屬性傷害</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>55%</td>
+                <td colspan="4">敵方本體滿CT</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>50%</td>
+                <td>黙示録の喇叭</td>
+                <td colspan="5">回復敵方全部弱體效果<br>消除我方全部強化效果<br>賦予敵方本體12の試練效果(無法消除)</td>
+            </tr>
+            <tr>
+                <td>50%</td>
+                <td colspan="4">無</td>
+                <td>真の力解放</td>
+                <td colspan="5">敵方本體最大CT變為2<br>普攻轉為造成隨機屬性多段傷害</td>
+            </tr>
+            <tr>
+                <td colspan="7">12の試練</td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅰ</td>
+                <td colspan="5">敵方火屬性攻擊力上升<br><font color="red">#敵方本體1T內受到1000萬火屬性傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅱ</td>
+                <td colspan="5">敵方水屬性攻擊力上升<br><font color="red">#敵方本體1T內受到1000萬水屬性傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅲ</td>
+                <td colspan="5">敵方土屬性攻擊力上升<br><font color="red">#敵方本體1T內受到1000萬土屬性傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅳ</td>
+                <td colspan="5">敵方風屬性攻擊力上升<br><font color="red">#敵方本體1T內受到1000萬風屬性傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅴ</td>
+                <td colspan="5">敵方光屬性攻擊力上升<br><font color="red">#敵方本體1T內受到1000萬光屬性傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅵ</td>
+                <td colspan="5">敵方暗屬性攻擊力上升<br><font color="red">#敵方本體1T內受到1000萬暗屬性傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅶ</td>
+                <td colspan="5">敵方必定造成剋屬傷害<br><font color="red">#敵方本體1T內受到200萬無屬性傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅷ</td>
+                <td colspan="5">敵方無視全屬性cut盾<br><font color="red">#overchain解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅸ</td>
+                <td colspan="5">敵方每回合回復HP<br><font color="red">#敵方本體1T內受到30下傷害解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅹ</td>
+                <td colspan="5">每T賦予我方全體1個以下隨機弱體效果<br>•攻擊力下降(1T)<br>•防禦力下降(1T)<br>•DA率下降(1T)<br>•TA率下降(1T)<br>•強壓(1T)<br>└HP回復無效<br>•亡靈(1T)<br>└受到的HP回復轉為傷害<br>•晕影(3T)<br>└無法看見血量<br><font color="red">#回合結束時，敵方本體存在10個弱體效果解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅺ</td>
+                <td colspan="5">每T消除我方2個強化效果<br><font color="red">#敵方發動パラダイス・ロスト時解除</font></td>
+            </tr>
+            <tr>
+                <td colspan="2">Ⅻ</td>
+                <td colspan="5">每T對我方全體造成3次無屬性傷害<br><font color="red">#全部試煉時解除</font></td>
+            </tr>
+            <tr>
+                <td>35%</td>
+                <td>パラダイス･ロスト</td>
+                <td>對我方全體造成隨機屬性8~9W傷害(無視全屬性cut盾)<br>目標死亡追加無法復活效果</td>
+                <td>無</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>25%</td>
+                <td>ゴフェル･アーク</td>
+                <td colspan="2">我方所有種族相同且配置靠後的角色死亡，種族無重複則不影響(包含後排)<br>發動天の水門場地效果<br>清除敵人所有弱體效果<br>賦予我方全體以下效果<br>•無法召喚<br>•無法復活</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td colspan="2">天の水門</td>
+                <td colspan="5">每T敵方與我方跳2~3T</td>
+            </tr>
+            <tr>
+                <td>20%</td>
+                <td>アキシオン･アポカリプス</td>
+                <td colspan="2">對我方隨機對象造成3次隨機屬性6倍傷害<br>赫刃Lv+1<br>依據赫刃Lv追加效果<br>•Lv2:敵方本體回復一個弱體效果<br>•Lv3:消除我方全體所有強化效果<br>•Lv4:對我方全體追加1W無屬性傷害<br>•Lv5:我方全體最大HP降低20%(累積)</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>15%</td>
+                <td>アキシオン･アポカリプス</td>
+                <td colspan="2">對我方隨機對象造成3次隨機屬性6倍傷害<br>赫刃Lv+1<br>依據赫刃Lv追加效果<br>•Lv2:敵方本體回復一個弱體效果<br>•Lv3:消除我方全體所有強化效果<br>•Lv4:對我方全體追加1W無屬性傷害<br>•Lv5:我方全體最大HP降低20%(累積)</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>10%</td>
+                <td>パラダイス･ロスト</td>
+                <td colspan="2">對我方全體造成99W9999隨機屬性傷害</td>
+                <td colspan="3">無</td>
+            </tr>
+            <tr>
+                <td>3%</td>
+                <td>パラダイス･ロスト</td>
+                <td colspan="2">對我方全體造成99W9999隨機屬性傷害</td>
+                <td colspan="3">無</td>
+            </tr>
+        </table>
+        <p>特動優先度</p>
+        <table border="1">
+            <tr>
+                <td>超越>35>CT特動(本體+翅膀)>25>其他</td>
+            </tr>
+        </table>
+    </body>
+</html>

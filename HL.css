@@ -1,0 +1,35 @@
+#sidebaropen{
+    background:no-repeat center/100% url(mission.jpg);
+    background-size:cover;
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:0%;
+    left:0%;
+}
+#sidebaropen button{
+    background-color:transparent; 
+    width:100px;
+    height:100px;
+}
+#content{
+    background:linear-gradient(#00FFFF,#0066FF);;
+    width:200px;
+    height:100%;
+    position:absolute;
+    top:0%;
+    left:0%;
+}
+#content button{
+    background-color:transparent;
+    font-size:40px;
+    width:100%;
+    height:60px;
+}
+#c{
+    background:no-repeat center/50% url(close.jpg);
+}
+#all{
+    position:relative;
+    top:100px;
+}

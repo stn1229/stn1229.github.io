@@ -1,1 +1,24 @@
-index.html
+<html>
+    <head>
+        <title>首頁</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            @import "index.css";
+        </style>
+    </head>
+    <body>
+        <a id="logo" href="index.html"><image src="logo.jpg"></a>
+        <div id="button">
+            <button><a href="index.html">首頁</a></button>
+            <button><a href="character.php">角色</a></button>
+            <button><a href="weapon.html">武器</a></button>
+            <button><a href="HL.html">關卡資訊</a></button>
+            <button onclick="end()">結束</button>
+        </div>
+    </body>
+    <script>
+        function end(){
+            alert('不准離開!!!');
+        }
+    </script>
+</html>

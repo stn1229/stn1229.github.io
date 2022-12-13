@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>ベリアル</title>
+        <audio src="彼列/" autoplay="true" loop="true"></audio>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            @import "bl.css";
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <button id="back"><a href="https://gbf-counter.herokuapp.com/HL.html">上一頁</a></button>
+            <p>ベリアル<br>6人本<br>V2系統<br></p>
+            <img src="彼列/bl1.jpg">
+            <br>
+        </div>
+        <div id="sm">
+            <p>特動表</p>
+            <div id="smt">
+                <p>被動效果</p>
+                <table id="smt1" border=1>
+                    <tr>
+                        <td>我方使用召喚石時<br>我方全體技能冷卻增加1~4T</td>
+                    </tr>
+                    <tr>
+                        <td>敵人鎖血5%<br>我方使用slow技能時受到6666無屬性傷害</td>
+                    </tr>
+                </table>
+                <p>T數特動</p>
+                <table id="smt2" border="1">
+                    <tr>
+                        <td colspan="3">T數為3的倍數發動(輪流)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">HP100%~51%</td>
+                        <td rowspan="2">ゴエティア</td>
+                        <td>造成16次隨機屬性傷害<br>賦予我方全體裂傷效果(最大HP10%/3T)<br>受到傷害上升效果(3T)<br><font color="red">#造成1500W傷害解除</font></td>
+                    </tr>
+                    <tr>
+                        <td>對我方全體造成隨機屬性5倍傷害<br>驅散2個強化效果<br>敵人CT上升1<br><font color="red">#35HIT解除</font></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">HP50%~0%</td>
+                        <td rowspan="2">レメゲトン</td>
+                        <td>造成16次隨機屬性傷害<br>賦予我全體裂傷效果(3T)<br>受到傷害上升效果(3T)<br>敵人的絕頂LV增加1<br><font color="red">#FC解除</font></td>
+                    </tr>
+                    <tr>
+                        <td>對我方全體造成隨機屬性3W傷害(無視防禦)<br>賦予技能封印/奧義封印效果<br><font color="red">#驅散解除</font></td>
+                    </tr>
+                </table>
+                <p>CT特動</p>
+                <table id="smt3" border="1">
+                    <tr>
+                        <td>100%~50%</td>
+                        <td>アスモデウス</td>
+                        <td>對我方隨機對象造成13次隨機屬性傷害<br>賦予我方全體以下效果<br>•奧義值上升率下降(無法回復)<br>•連續攻擊機率下降(無法回復)<br>•最大HP減少30%(累積/無法回復)</td>
+                    </tr>
+                    <tr>
+                        <td>50%~0%</td>
+                        <td>アナゲンネーシス</td>
+                        <td>賦予我方全體(包含sub)全部無法戰鬥效果<br>•參戰者因為此特動全滅時其他參戰者也皆會觸發</td>
+                    </tr>
+                </table>
+                <p>HP特動</p>
+                <table id="smt4" border="1">
+                    <tr>
+                        <td>100%</td>
+                        <td>レメゲトン</td>
+                        <td colspan="5">對我方全體造成19999無屬性傷害<br>賦予我方主角狡知の戯れ效果<br>•每3回合賦予我方全體隨機效果</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">狡知の戯れ</td>
+                        <td><img src="彼列/ra.jpg"></td>
+                        <td colspan="2">赤林檎(α)</td>
+                        <td colspan="2">賦予我方全體以下效果(2T/無法消除)<br>使用傷害技能(紅技)時<br>消耗現有50%HP<br>給予敵人等同於消耗的HP200倍的無屬性傷害<br><font color=red>#使用傷害技能(紅技)時解除</font></td>
+                    </tr>
+                    <tr>
+                        <td><img src="彼列/ga.jpg"></td>
+                        <td colspan="2">緑林檎(β)</td>
+                        <td colspan="2">賦予我方全體以下效果(2T/無法消除)<br>使用回復技能(綠技)時<br>我方全體回復1WHP<br>敵人CT增加1<br><font color="red">#使用回復技能(綠技)時解除</font></td>
+                    </tr>
+                    <tr>
+                        <td><img src="彼列/ya.jpg"></td>
+                        <td colspan="2">黄林檎(γ)</td>
+                        <td colspan="2">賦予我方全體以下效果(2T/無法消除)<br>使用強化技能(黃技)時<br>技能冷卻時間減少2T<br>奧義值歸0<br><font color="red">#使用強化技能(黃技)時解除</font></td>
+                    </tr>
+                    <tr>
+                        <td><img src="彼列/ba.jpg"></td>
+                        <td colspan="2">青林檎(δ)</td>
+                        <td colspan="2">賦予我方全體以下效果(2T/無法消除)<br>使用弱體技能(藍技)時<br>追加slow效果<br>受到1W無屬性傷害<br><font color="red">#使用弱體技能(藍技)時解除</font></td>
+                    </tr>
+                    <tr>
+                        <td>75%</td>
+                        <td>真の力解放</td>
+                        <td colspan="5">敵人的弱體效果全回復<br>敵人攻擊時追加技能封印效果</td>
+                    </tr>
+                    <tr>
+                        <td>65%</td>
+                        <td>アスモデウス</td>
+                        <td colspan="5">造成13次隨機屬性傷害<br>賦予我方全體謀略の果実ω效果<br><font color="red">#驅散解除</font></td>
+                    </tr>
+                    <tr>
+                        <td>謀略の果実ω</td>
+                        <td><img src="彼列/pa.jpg"></td>
+                        <td colspan="2">紫林檎(ω)</td>
+                        <td colspan="2">賦予我方全體以下效果<br>使用奧義時<br>奧義發動2次<br>受到2次7500無屬性傷害<br><font color="red">#使用奧義時解除</font></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">50%</td>
+                        <td>真の力解放</td>
+                        <td colspan="5">敵人的弱體效果全回復<br>敵人的攻擊方式變化(全體傷害→隨機對象多段傷害)<br>賦予無視敵人全屬性cut盾效果(無法消除)<br>賦予敵人3個虚偽の詐術效果(無法消除/solo時效果持續5分鐘)<br>•對象屬性攻擊吸收<br>•各組隨機選擇1個屬性(火or風/水or土/光or暗)<br><font color="red">#1T造成1500W傷害解除</font></td>
+                    </tr>
+                    <tr>
+                        <td>アナゲンネーシス</td>
+                        <td colspan="5">對我方全體造成1倍暗屬性傷害<br>追加對應闇の意志LV的無屬性傷害<br>•每層闇の意志1W無屬性傷害</td>
+                    </tr>
+                    <tr>
+                        <td>30%</td>
+                        <td>ゴエティア</td>
+                        <td colspan="5">造成16次隨機屬性傷害<br>賦予我全體裂傷效果<br>受到傷害上升效果<br>敵人的絕頂LV增加1<br><font color="red">#FC解除</font></td>
+                    </tr>
+                    <tr>
+                        <td>25%</td>
+                        <td>真の力解放</td>
+                        <td colspan="5">敵人的弱體效果全回復<br>敵人攻擊時追加以下效果<br>•奧義值-100%<br>•驅散2個強化效果</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">5%</td>
+                        <td>真の力解放</td>
+                        <td colspan="5">依照參戰者數量提升敵人的屬性傷害cut</td>
+                    </tr>
+                    <tr>
+                        <td>レメゲトン</td>
+                        <td colspan="5">對我方全體造成1倍暗屬性傷害<br>消除狡知の翼效果(鎖HP5%)<br>敵人CT上升至MAX<br>CT無法減少</td>
+                    </tr>
+                    <tr>
+                        <td id="ex">1人</td>
+                        <td id="ex">2人</td>
+                        <td id="ex">3人</td>
+                        <td id="ex">4人</td>
+                        <td id="ex">5人</td>
+                        <td id="ex">6人</td>
+                    </tr>
+                    <tr>
+                        <td id="ex"></td>
+                        <td id="ex"></td>
+                        <td id="ex"></td>
+                        <td id="ex">20%</td>
+                        <td id="ex">30%</td>
+                        <td id="ex"></td>
+                    </tr>
+                </table>
+                <p>特動優先度</p>
+                <table border="1">
+                    <tr>
+                        <td>5%特動>CT特動>HP特動>T數特動</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

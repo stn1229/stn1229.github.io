@@ -1,0 +1,24 @@
+#main{
+    font-size:20px;
+    text-align:center;
+}
+#back{
+    position:absolute;
+    top:0%;
+    left:0%;
+}
+#sm{
+    font-size:20px;
+    text-align:center;
+}
+p{
+    font-size:50px;
+}
+table{
+    width:100%;
+    position:relative;
+    text-align:center;
+}
+#ex{
+    width:100px;
+}

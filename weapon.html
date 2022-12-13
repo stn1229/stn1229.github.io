@@ -1,0 +1,414 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>武器模擬器</title>
+        <style>
+            @import "weapon.css";
+        </style>
+    </head>
+    <body>
+        <div id="sidebaropen">
+            <button onclick="opensidebar('content','sidebaropen','text')"></button>
+        </div>
+        <div id="content" style=display:none>
+            <button id="close" onclick="closesidebar('content','sidebaropen','text')"></button>
+            <button><a href="index.html">首頁</a></button>
+            <button><a href="character.php">角色</a></button>
+            <button><a href="weapon.html">武器</a></button>
+            <button><a href="HL.html">關卡資訊</a></button>
+            <button onclick="end()">結束</button>
+        </div>
+
+        <div id="text">
+            <table id="盤面">
+                <tr>
+                    <td rowspan="4">
+                        <button onclick="deleteweapon('w0')">x</button>
+                        <div id="w0" style="width:70px;height:140px" ondragover="dragoverhandler(event)" ondrop="drophandlermain(event)"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="deleteweapon('w1')">x</button>
+                        <div id="w1" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                    </td>
+                    <td>
+                        <button onclick="deleteweapon('w2')">x</button>
+                        <div id="w2" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                        </td>
+                    <td>
+                        <button onclick="deleteweapon('w3')">x</button>
+                        <div id="w3" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="deleteweapon('w4')">x</button>
+                        <div id="w4" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                    </td>
+                    <td>
+                        <button onclick="deleteweapon('w5')">x</button>
+                        <div id="w5" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                    </td>
+                    <td>
+                        <button onclick="deleteweapon('w6')">x</button>
+                        <div id="w6" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="deleteweapon('w7')">x</button>
+                        <div id="w7" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                    </td>
+                    <td>
+                        <button onclick="deleteweapon('w8')">x</button>
+                        <div id="w8" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                    </td>
+                    <td>
+                        <button onclick="deleteweapon('w9')">x</button>
+                        <div id="w9" style="width:50px;height:100px" ondragover="dragoverhandler(event)" ondrop="drophandlersub(event)"></div>
+                    </td>
+                </tr>
+            </table>
+            <table id="ans" border="1">
+                <tr>
+                    <td colspan=2>結果</td>
+                </tr>
+                
+                <tr>
+                    <td colspan=2>
+                        <select>
+                            <option>結果類別</option>
+                            <option id="allattack" title="方陣攻刃 攻刃 EX攻刃(含特殊) 傷害上限 予傷">全攻擊</option>
+                            <option id="normal" title="爆擊 DA TA 普攻上限">普攻</option>
+                            <option id="bigattack" title="奧義傷害 奧傷上限 奧義予傷 奧義上升量">奧義</option>
+                            <option id="skill" title="技傷上限 技能予傷">技能</option>
+                            <option id="elseattack" title="方陣渾身 渾身 方陣背水 背水 進境">它攻擊</option>
+                            <option id="Defense" title="HP HP減少 防禦 弱體耐性">防禦</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-attack="0">Attack</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td data-hp="0">Hp</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="submit" onclick="show()">顯示</button></td>
+                </tr>
+
+                <tr id="Mattack" style="display:none;">
+                    <td>M攻刃</td>
+                    <td></td>
+                </tr>
+                <tr id="attack" style="display:none;">
+                    <td>攻刃</td>
+                    <td></td>
+                </tr>
+                <tr id="EXattack" style="display:none;">
+                    <td>EX攻刃</td>
+                    <td></td>
+                </tr>
+                <tr id="ALLlimit" style="display:none;">
+                    <td>傷害上限</td>
+                    <td></td>
+                </tr>
+                <tr id="Ademage" style="display:none;">
+                    <td>予傷上升</td>
+                    <td></td>
+                </tr>
+
+                <tr id="Cattack" style="display:none;">
+                    <td>爆擊</td>
+                    <td></td>
+                </tr>
+                <tr id="DAattack" style="display:none;">
+                    <td>DA機率</td>
+                    <td></td>
+                </tr>
+                <tr id="TAattack" style="display:none;">
+                    <td>TA機率</td>
+                    <td></td>
+                </tr>
+                <tr id="Alimit" style="display:none;">
+                    <td>普攻上限</td>
+                    <td></td>
+                </tr>
+
+                <tr id="mystery" style="display:none;">
+                    <td>奧義傷害</td>
+                    <td></td>
+                </tr>
+                <tr id="Mlimit" style="display:none;">
+                    <td>奧傷上限</td>
+                    <td></td>
+                </tr>
+                <tr id="Mdemage" style="display:none;">
+                    <td>奧義予傷</td>
+                    <td></td>
+                </tr>
+                <tr id="getm" style="display:none">
+                    <td>奧義上升量</td>
+                    <td></td>
+                </tr>
+
+                <tr id="Slimit" style="display:none;">
+                    <td>技傷上限</td>
+                    <td></td>
+                </tr>
+                <tr id="Sdemage" style="display:none;">
+                    <td>技能予傷</td>
+                    <td></td>
+                </tr>
+
+                <tr id="MHattack" style="display:none;">
+                    <td>M渾身</td>
+                    <td></td>
+                </tr>
+                <tr id="Hattack" style="display:none;">
+                    <td>渾身</td>
+                    <td></td>
+                </tr>
+                <tr id="MLattack" style="display:none;">
+                    <td>M背水</td>
+                    <td></td>
+                </tr>
+                <tr id="Lattack" style="display:none;">
+                    <td>背水</td>
+                    <td></td>
+                </tr>
+                <tr id="Tattack" style="display:none;">
+                    <td>進境</td>
+                    <td></td>
+                </tr>
+                
+                <tr id="HP" style="display:none;">
+                    <td>HP</td>
+                    <td></td>
+                </tr>
+                <tr id="defense" style="display:none;">
+                    <td>防禦</td>
+                    <td></td>
+                </tr>
+                <tr id="DBdefense" style="display:none;">
+                    <td>弱體耐性</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <div id="type">
+                <button onclick="display('a1')" style="background-color:#f57e7e">火</button>        
+                <button onclick="display('a2')" style="background-color:#6d6df7">水</button>            
+                <button onclick="display('a3')" style="background-color:#a57a2b">土</button>    
+                <button onclick="display('a4')" style="background-color:#4db34d">風</button>    
+                <button onclick="display('a5')" style="background-color:#f7f77f">光</button>       
+                <button onclick="display('a6')" style="background-color:#d845d8">暗</button>      
+                <br>
+            </div>
+            <div id="weaponlist">
+                <div id="a1" style="display:none">
+                    <img id="w1-0" src="weapon/1-0.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="w1-1" src="weapon/1-1.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                </div>
+                <div id="a2" style="display:none">
+                    <img id="水禍の麗傘" src="weapon/水禍の麗傘.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="太歳精弓" src="weapon/太歳精弓.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="アトランティス" src="weapon/アトランティス.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="オフィーリア" src="weapon/オフィーリア.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="オメガロッド" src="weapon/オメガロッド.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="ガリレオ･サイト" src="weapon/ガリレオ･サイト.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="ナイト･オブ･アイス" src="weapon/ナイト･オブ･アイス.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="ライズ･オブ･ジャスティス" src="weapon/ライズ･オブ･ジャスティス.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="絶対否定の杖" src="weapon/絶対否定の杖.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                </div>
+                <div id="a3" style="display:none">
+                    <img id="w3-0" src="weapon/3-0.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                </div>
+                <div id="a4" style="display:none">
+                    <img id="w4-0" src="weapon/4-0.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                </div>
+                <div id="a5" style="display:none">
+                    <img id="w5-0" src="weapon/5-0.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                </div>
+                <div id="a6" style="display:none">
+                    <img id="w6-0" src="weapon/6-0.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="w6-1" src="weapon/6-1.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="w6-2" src="weapon/6-2.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="w6-3" src="weapon/6-3.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                    <img id="w6-4" src="weapon/6-4.jpg" draggable="true" ondragstart="dragstarthandler(event)"></img>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function opensidebar(id,id2,id3){
+            var x=document.getElementById(id);
+            var y=document.getElementById(id2);
+            var z=document.getElementById(id3);
+            x.style.display="";
+            y.style.display="none";
+            z.style.display="none";
+        }
+        function end(){
+            alert('不准離開!!!');
+        }
+        function closesidebar(id,id2,id3){
+            var x=document.getElementById(id);
+            var y=document.getElementById(id2);
+            var z=document.getElementById(id3);
+            x.style.display="none";
+            y.style.display="";
+            z.style.display="";
+        }
+        function deleteweapon(id){
+            var now=document.getElementById(id);
+            var chnode=now.firstChild;
+            now.removeChild(chnode);
+        }
+        function display(id){
+	    	var target=document.getElementById(id);
+	    	if(target.style.display=="none")target.style.display="";
+	    	else target.style.display="none";
+	    }
+        function dragstarthandler(event){
+            event.dataTransfer.setData('image/jpg' ,event.currentTarget.id);
+        }
+        function dragoverhandler(event){
+            event.preventDefault();
+        }
+        function drophandlermain(event){
+            event.preventDefault();
+            var old=event.currentTarget.firstChild;
+            var did=event.dataTransfer.getData('image/jpg');
+            var d=document.getElementById(did);
+            var nd=d.cloneNode(true);
+            event.currentTarget.appendChild(nd);
+            nd.style.width="70px";
+            nd.style.height="140px";
+            event.currentTarget.removeChild(old);
+        }
+        function drophandlersub(event){
+            event.preventDefault();
+            var old=event.currentTarget.firstChild;
+            var did=event.dataTransfer.getData('image/jpg');
+            var d=document.getElementById(did);
+            var nd=d.cloneNode(true);
+            event.currentTarget.appendChild(nd);
+            nd.style.width="50px";
+            nd.style.height="100px";
+            event.currentTarget.removeChild(old);
+        }
+
+        function show(id){
+            var a=document.getElementById("allattack");
+            var a_1=document.getElementById("Mattack");
+            var a_2=document.getElementById("attack");
+            var a_3=document.getElementById("EXattack");
+            var a_4=document.getElementById("ALLlimit");
+            var a_5=document.getElementById("Ademage");
+
+            var b=document.getElementById("normal");
+            var b_1=document.getElementById("Cattack");
+            var b_2=document.getElementById("DAattack");
+            var b_3=document.getElementById("TAattack");
+            var b_4=document.getElementById("Alimit");
+
+            var c=document.getElementById("bigattack");
+            var c_1=document.getElementById("mystery");
+            var c_2=document.getElementById("Mlimit");
+            var c_3=document.getElementById("Mdemage");
+            var c_4=document.getElementById("getm")
+
+            var d=document.getElementById("skill");
+            var d_1=document.getElementById("Slimit");
+            var d_2=document.getElementById("Sdemage");
+
+            var e=document.getElementById("elseattack");
+            var e_1=document.getElementById("MHattack");
+            var e_2=document.getElementById("Hattack");
+            var e_3=document.getElementById("MLattack");
+            var e_4=document.getElementById("Lattack");
+            var e_5=document.getElementById("Tattack");
+
+            var f=document.getElementById("Defense");
+            var f_1=document.getElementById("HP");
+            var f_2=document.getElementById("defense");
+            var f_3=document.getElementById("DBdefense");
+
+            if(a.selected==true){
+                a_1.style.display="";
+                a_2.style.display="";
+                a_3.style.display="";
+                a_4.style.display="";
+                a_5.style.display="";
+            }
+            if(b.selected==true){
+                b_1.style.display="";
+                b_2.style.display="";
+                b_3.style.display="";
+                b_4.style.display="";
+            }
+            if(c.selected==true){
+                c_1.style.display="";
+                c_2.style.display="";
+                c_3.style.display="";
+                c_4.style.display=""
+            }
+            if(d.selected==true){
+                d_1.style.display="";
+                d_2.style.display="";
+            }
+            if(e.selected==true){
+                e_1.style.display="";
+                e_2.style.display="";
+                e_3.style.display="";
+                e_4.style.display="";
+                e_5.style.display="";
+            }
+            if(f.selected==true){
+                f_1.style.display="";
+                f_2.style.display="";
+                f_3.style.display="";
+            }
+
+            if(a.selected==false){
+                a_1.style.display="none";
+                a_2.style.display="none";
+                a_3.style.display="none";
+                a_4.style.display="none";
+                a_5.style.display="none";
+            }
+            if(b.selected==false){
+                b_1.style.display="none";
+                b_2.style.display="none";
+                b_3.style.display="none";
+                b_4.style.display="none";
+            }
+            if(c.selected==false){
+                c_1.style.display="none";
+                c_2.style.display="none";
+                c_3.style.display="none";
+                c_4.style.display="none"
+            }
+            if(d.selected==false){
+                d_1.style.display="none";
+                d_2.style.display="none";
+            }
+            if(e.selected==false){
+                e_1.style.display="none";
+                e_2.style.display="none";
+                e_3.style.display="none";
+                e_4.style.display="none";
+                e_5.style.display="none";
+            }
+            if(f.selected==false){
+                f_1.style.display="none";
+                f_2.style.display="none";
+                f_3.style.display="none";
+            }
+        }
+    </script>
+</html>

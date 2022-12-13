@@ -1,0 +1,31 @@
+body{
+    background:url(background.jpg);
+    background-size:cover;
+}
+#logo{
+    width:200px;
+    height:200px;
+    position:relative;
+    top:0%;
+    left:43%;
+    background-color:transparent;
+}
+#button{
+    position:absolute;
+    top:200px;
+    left:35%;
+}
+button{
+    width:100px;
+    height:100px;
+    background-color:transparent;
+    font-size:20px;
+    font-weight:bold;
+    color:black;
+}
+a{
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    color:black;
+}

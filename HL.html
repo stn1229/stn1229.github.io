@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>高難關卡首頁</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            @import "HL.css";
+        </style>
+    </head>
+    <body>
+        <div id="sidebaropen">
+            <button onclick="opensidebar('content','sidebaropen','all')"></button>
+        </div>
+        <div id="content" style=display:none>
+            <button id="c" onclick="closesidebar('content','sidebaropen','all')"></button>
+            <button><a href="index.html">首頁</a></button>
+            <button><a href="character.php">角色</a></button>
+            <button><a href="weapon.html">武器</a></button>
+            <button><a href="HL.html">關卡資訊</a></button>
+            <button onclick="end()">結束</button>
+        </div>
+        <div id="all">
+            <a href="HL/法桑.html"><img src="HL/fs.jpg" title="法桑"></a>
+            <a href="HL/巴布.html"><img src="HL/bb.jpg" title="巴布"></a>
+            <a href="HL/彼列.html"><img src="HL/bl.jpg" title="彼列"></a>
+            <a href="HL/極巴.html"><img src="HL/jb.jpg" title="極巴"></a>
+        </div>
+    </body>
+    <script>
+        function opensidebar(id,id2,id3){
+            var x=document.getElementById(id);
+            var y=document.getElementById(id2);
+            var z=document.getElementById(id3);
+            x.style.display="";
+            y.style.display="none";
+            z.style.display="none";
+        }
+        function end(){
+            alert('不准離開!!!');
+        }
+        function closesidebar(id,id2,id3){
+            var x=document.getElementById(id);
+            var y=document.getElementById(id2);
+            var z=document.getElementById(id3);
+            x.style.display="none";
+            y.style.display="";
+            z.style.display="";
+        }
+    </script>
+</html>

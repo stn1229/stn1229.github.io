@@ -1,0 +1,19 @@
+body{
+    text-align:center;
+}
+button{
+    position:absolute;
+    top:0%;
+    left:0%;
+}
+#name{
+    font-size:70px;
+}
+p:not(#name){
+    font-size:50px;
+}
+table{
+    width:100%;
+    position:relative;
+    text-align:center;
+}
