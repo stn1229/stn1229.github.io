@@ -1,56 +1,74 @@
-body{
-    background-color:gray;
-    overflow-x:hidden;
-}
-#sidebaropen{
-    background:no-repeat center/100% url(mission.jpg);
-    background-size:cover;
-    width:100px;
-    height:100px;
-    position:absolute;
-    top:0%;
-    left:0%;
-}
-#sidebaropen button{
-    background-color:transparent; 
-    width:100px;
-    height:100px;
-}
 #content{
-    background:linear-gradient(#00FFFF,#0066FF);;
-    width:200px;
-    height:100%;
-    position:absolute;
-    top:0%;
-    left:0%;
-}
-#content button{
-    background-color:transparent;
-    font-size:30px;
+    padding:0;
+    margin:0;
     width:100%;
+    height:100%;
+}
+#background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:gray;
+    background-size:cover;
+    z-index:-1;
+}
+.header{
     height:60px;
+    margin-bottom:5px;
+    box-sizing:border-box;
 }
-#c1{
-    background:no-repeat center/50% url(close.jpg);
-}
-#kd{
+ul{
+    background-color:white;
     position:relative;
-    top:0px;
-    left:30%;
+    margin:0;
+    padding-left:0;
+    list-style:none;
+    display:flex;
+    flex-wrap:nowrap;
+    box-sizing:border-box;
 }
-#kd button{
+li{
+    position:relative;
+    display:inline-flex;
+    line-height:20px;
+    padding:20px;
+    margin:0;
+    cursor:pointer;
+    box-sizing:border-box;
+    justify-content:center;
+    align-items:center;
+    border:solid black 1px;
+}
+.button{
+    position:relative;
+    display:inline-block;
+    padding:0;
+    color:black;
+}
+#button{
+    position:relative;
+    width:100%;
+}
+#button button{
+    position:relative;
+    margin:20px;
+    padding:0;
     width:100px;
     height:100px;
+    border-radius:10px;
 }
-#ch{
+.character{
     width:100%;
     height:80%;
     position:relative;
     top:5%;
     left:0%;
-    overflow-y:auto;
+    overflow-y:none;
 }
-#ch img{
+div>a>img{
+    padding:1px;
     width:100px;
     height:55px;
     margin:5px;

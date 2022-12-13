@@ -7,17 +7,6 @@
         </style>
     </head>
     <body>
-        <div id="sidebaropen">
-            <button onclick="opensidebar('content','sidebaropen','ch','kd')"></button>
-        </div>
-        <div id="content" style=display:none>
-            <button id="c1" onclick="closesidebar('content','sidebaropen','ch','kd')"></button>
-            <button><a href="index.html">首頁</a></button>
-            <button><a href="character.php">角色</a></button>
-            <button><a href="weapon.html">武器</a></button>
-            <button><a href="HL.html">關卡資訊</a></button>
-            <button onclick="end()">結束</button>
-        </div>
         <div id="kd">
             <button onclick="display('a')" style="background-color:#f57e7e">火</button>
             <button onclick="display('b')" style="background-color:#6d6df7">水</button>
@@ -95,29 +84,6 @@
         </div>
     </body>
     <script>
-        function opensidebar(id,id2,id3,id4){
-            var x=document.getElementById(id);
-            var y=document.getElementById(id2);
-            var z=document.getElementById(id3);
-            var k=document.getElementById(id4);
-            x.style.display="";
-            y.style.display="none";
-            z.style.display="none";
-            k.style.display="none";
-        }
-        function end(){
-            alert('不准離開!!!');
-        }
-        function closesidebar(id,id2,id3,id4){
-            var x=document.getElementById(id);
-            var y=document.getElementById(id2);
-            var z=document.getElementById(id3);
-            var k=document.getElementById(id4);
-            x.style.display="none";
-            y.style.display="";
-            z.style.display="";
-            k.style.display="";
-        }
         function display(id){
             var x=document.getElementById(id);
             if(x.style.display=="")x.style.display="none";
