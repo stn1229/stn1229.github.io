@@ -1,49 +1,58 @@
 <html>
     <head>
         <title>高難關卡首頁</title>
+        <link rel="icon" href="HLicon.jpg">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <style>
             @import "HL.css";
         </style>
     </head>
     <body>
-        <div id="sidebaropen">
-            <button onclick="opensidebar('content','sidebaropen','all')"></button>
-        </div>
-        <div id="content" style=display:none>
-            <button id="c" onclick="closesidebar('content','sidebaropen','all')"></button>
-            <button><a href="index.html">首頁</a></button>
-            <button><a href="character.php">角色</a></button>
-            <button><a href="weapon.html">武器</a></button>
-            <button><a href="HL.html">關卡資訊</a></button>
-            <button onclick="end()">結束</button>
-        </div>
-        <div id="all">
-            <a href="HL/法桑.html"><img src="HL/fs.jpg" title="法桑"></a>
-            <a href="HL/巴布.html"><img src="HL/bb.jpg" title="巴布"></a>
-            <a href="HL/彼列.html"><img src="HL/bl.jpg" title="彼列"></a>
-            <a href="HL/極巴.html"><img src="HL/jb.jpg" title="極巴"></a>
+        <div id="content">
+            <div id="background"></div>
+
+            <header class="header">
+                <ul>
+                    <li><a href="https://stn1229.github.io/index.html" class="button">首頁</a></li>
+                    <li><a href="https://stn1229.github.io/character.html" class="button">角色資訊</a></button></li>
+                    <li><a href="https://stn1229.github.io/weaponinfo.html" class="button">武器資訊</a></button></li>
+                    <li><a href="https://stn1229.github.io/HL.html" class="button">關卡資訊</a></li>
+                    <li><a href="https://stn1229.github.io/weapon.html" class="button">武器盤模擬</a></li>
+                    <li><a href="https://stn1229.github.io/chest.html" class="button">舔寶網</a></li>
+                </ul>
+            </header>
+
+            <div id="info">
+                <div id="none">
+                    <h1>無屬性敵人</h1>
+                    <a href="HL/法桑.html"><img src="HL/法桑.jpg"></a>
+                    <a href="HL/巴布.html"><img src="HL/巴布.jpg"></a>
+                    <a href="HL/彼列.html"><img src="HL/彼列.jpg"></a>
+                    <a href="HL/極巴.html"><img src="HL/極巴.jpg"></a>
+                </div>
+                <div id="fire">
+                    <h1>火屬性敵人</h1>
+                    <a href="HL/無限.html"><img src="HL/無限.jpg"></a>
+                </div>
+                <div id="water">
+                    <h1>水屬性敵人</h1>
+                    <a href="HL/機神.html"><img src="HL/機神.jpg"></a>
+                </div>
+                <div id="earth">
+                    <h1>土屬性敵人</h1>
+                    <a href="HL/飛哥.html"><img src="HL/飛哥.jpg"></a>
+                </div>
+                <div id="wind">
+                    <h1>風屬性敵人</h1>
+                </div>
+                <div id="light">
+                    <h1>光屬性敵人</h1>
+                </div>
+                <div id="dark">
+                    <h1>暗屬性敵人</h1>
+                </div>
+            </div>
+            
         </div>
     </body>
-    <script>
-        function opensidebar(id,id2,id3){
-            var x=document.getElementById(id);
-            var y=document.getElementById(id2);
-            var z=document.getElementById(id3);
-            x.style.display="";
-            y.style.display="none";
-            z.style.display="none";
-        }
-        function end(){
-            alert('不准離開!!!');
-        }
-        function closesidebar(id,id2,id3){
-            var x=document.getElementById(id);
-            var y=document.getElementById(id2);
-            var z=document.getElementById(id3);
-            x.style.display="none";
-            y.style.display="";
-            z.style.display="";
-        }
-    </script>
 </html>
