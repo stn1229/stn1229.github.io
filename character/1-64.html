@@ -7,83 +7,119 @@
         </style>
     </head>
     <body>
-        <button><a href="https://gbf-counter.herokuapp.com/character.php">上一頁</a></button>
-        <p id="name">水着メドゥーサ</p>
-        <img src="大圖字/1-64.jpg">
-        <p>基本資訊</p>
-        <table id="data" border="1">
-            <tr>
-                <td>定位</td>
-                <td>防禦</td>
-            </tr>
-            <tr>
-                <td>得意武器</td>
-                <td>格鬥/杖</td>
-            </tr>
-            <tr>
-                <td>種族</td>
-                <td>星晶獸</td>
-            </tr>
-            <tr>
-                <td>CV</td>
-                <td>水橋かおり</td>
-            </tr>
-        </table>
-        <p>立繪</p>
-        上限解放前||上限解放後
-        <br>
-        <img src="大圖/1-64/a.jpg"><img src="大圖/1-64/b.jpg">
-        <br>
-        <p>奧義</p>
-        <table border="1">
-            <tr>
-                <td rowspan="2"><audio src="奧義語音/1-64.mp3" controls="true"></audio></td>
-                <td>メドゥシアナ･スライダー</td>
-            </tr>
-            <tr>
-                <td>火屬性4.5倍傷害<br>我方全體幻影效果(1次)<br>自己完全迴避效果(1次)</td>
-            </tr>
-        </table>
-        <p>主動技能</p>
-        <table border="1">
-            <tr>
-                <td rowspan="2"><img src="技能圖/1-64/1.jpg"><br>CD:7</td>
-                <td>ミラージュ･アイ</td>
-            </tr>
-            <tr>
-                <td>我方全體反射盾效果(60%/3T/每T1次)<br>我方全體預防盾效果(1次)<br>•當自己波蛇Lv5時，全體屏障效果(耐久5000)，2倍受傷反擊效果(被打迴避/3T/2次)</td>
-            </tr>
-            <tr>
-                <td rowspan="2"><img src="技能圖/1-64/2.jpg"><br>CD:5</td>
-                <td>サーペントスパイク</td>
-            </tr>
-            <tr>
-                <td>敵方隨機目標5次火屬性1倍傷害<br>敵方全體驅散1個強化效果<br>敵方全體毒效果(5000)，持續180秒<br>•隨著波蛇Lv追加傷害次數(最多10次)</td>
-            </tr>
-            <tr>
-                <td rowspan="2"><img src="技能圖/1-64/3.jpg"><br>CD:11</td>
-                <td>ペトリファクトゲイズ</td>
-            </tr>
-            <tr>
-                <td>敵方全體獲得以下效果<br>•魔眼的石化(1T/無法消除)<br>└無法行動<br>•DA-100%(6T)<br>•TA-100%(6T)<br>•命中-30%(6T)</td>
-            </tr>
-        </table>
-        <p>被動技能</p>
-        <table border="1">
-            <tr>
-                <td rowspan=2><img src="技能圖/sk.jpg"></td>
-                <td>星トモのバカンス</td>
-            </tr>
-            <tr>
-                <td>依據隊伍中星晶獸數量自己獲得以下強化效果<br>•1隻:攻擊+30%(個別乘算/久遠類)<br>•2隻:防禦+100%<br>•3隻:必TA<br>•4隻:迴避率+20%<br>•5隻:傷害上限+20%</td>
-            </tr>
-            <tr>
-                <td rowspan=2><img src="技能圖/sk.jpg"></td>
-                <td>波蛇の姫</td>
-            </tr>
-            <tr>
-                <td>自己沒受到傷害的回合結束時，波蛇Lv+1(最多5/無法消除)<br>波蛇Lv5且自己沒受到傷害的回合結束時，發動2技</td>
-            </tr>
-        </table>
+        <div class="content">
+            <div class="background fire"></div>
+            <div id="button">
+                <button><a href="https://stn1229.github.io/character.html">上一頁</a></button>
+            </div>
+            <div class="data">
+
+                <h1>水着メドゥーサ</h1>
+                <img src="大圖字/1-64.jpg">
+
+                <h2>基本資訊</h2>
+                <div class="table">
+                    <table border="1">
+                        <tr>
+                            <td>定位</td>
+                            <td>防禦</td>
+                        </tr>
+                        <tr>
+                            <td>得意武器</td>
+                            <td>格鬥/杖</td>
+                        </tr>
+                        <tr>
+                            <td>種族</td>
+                            <td>星晶獸</td>
+                        </tr>
+                        <tr>
+                            <td>CV</td>
+                            <td>水橋かおり</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>立繪</h2>
+                <div class="picture-2">
+                    <div class="pictureouter">
+                        <h3>上限解放前</h3>
+                        <img class="picturecontent" src="大圖/1-64/1.jpg">
+                    </div>
+                    <div class="pictureouter">
+                        <h3>上限解放後</h3>
+                        <img class="picturecontent" src="大圖/1-64/2.jpg">
+                    </div>
+                    <div id="picture3">
+
+                    </div>
+                </div>
+
+                <h2>奧義</h2>
+                <div class="table">
+                    <table border="1">
+                        <tr>
+                            <td rowspan="2"><audio src="奧義語音/1-64.mp3" controls="true"></audio></td>
+                            <td>メドゥシアナ･スライダー</td>
+                        </tr>
+                        <tr>
+                            <td>4.5倍火屬性傷害<br>我方全體幻影效果×1次<br>自己全迴避×1次</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>技能</h2>
+                <div class="table">
+                    <table border="1">
+                        <tr>
+                            <td rowspan="2"><img src="技能圖/1-64/1.jpg"><br>CD:7</td>
+                            <td>ミラージュ･アイ</td>
+                        </tr>
+                        <tr>
+                            <td>我方全體<br>・反射盾(60%/1次)×3T<br>・預防盾×1次<br>#波蛇Lv5時追加<br>・護盾效果(最多5000)<br>・2倍反擊效果(迴避･受到傷害/2次)×3T</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><img src="技能圖/1-64/2.jpg"><br>CD:5</td>
+                            <td>サーペントスパイク</td>
+                        </tr>
+                        <tr>
+                            <td>隨機目標1倍火屬性傷害×5次<br>敵方全體<br>・驅散1個效果<br>・毒效果(5000)×180秒<br>#波蛇Lv增加攻擊次數(5次+波蛇Lv數/最多10次)</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><img src="技能圖/1-64/3.jpg"><br>CD:11</td>
+                            <td>ペトリファクトゲイズ</td>
+                        </tr>
+                        <tr>
+                            <td>敵方全體<br>・行動封印×1T(不可延長/不可消除)<br>・DA-100%×6T<br>・TA-100%×6T<br>・命中率-30%×6T</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>被動技能</h2>
+                <div class="table">
+                    <table border="1">
+                        <tr>
+                            <td rowspan=2><img src="技能圖/sk.jpg"></td>
+                            <td>星トモのバカンス</td>
+                        </tr>
+                        <tr>
+                            <td>隊伍的種族為星晶獸的數量獲得以下效果<br>1人:攻擊+30%(×個別/+久遠類)<br>2人:防禦+100%<br>3人:必TA<br>4人:迴避率+20%<br>5人:傷害上限+20%</td>
+                        </tr>
+                        <tr>
+                            <td rowspan=2><img src="技能圖/sk.jpg"></td>
+                            <td>波蛇の姫</td>
+                        </tr>
+                        <tr>
+                            <td>自己沒有受到傷害時，波蛇Lv+1(最多5/無法消除)<br>#波蛇Lv5沒受到傷害時<br>・回合結束時，發動2技(サーペントスパイク)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>武器</h2>
+                <div class="weapon">
+                    <a href="https://stn1229.github.io/weaponinfo/1-64.html"><img id="weapon" src="\weapon\1-64.jpg"></a>
+                </div>
+
+            </div>
+        </div>
     </body>
 </html>
