@@ -49,8 +49,9 @@ li{
 }
 #below{
     width:100%;
-    height:100%-60px;
+    height:800px;
     top:60px;
+    box-sizing:border-box;
 }
 #left{
     position:absolute;
@@ -58,6 +59,7 @@ li{
     height:100%;
     padding:0;
     margin:0;
+    margin-right:2px;
 }
 #middle{
     position:absolute;
