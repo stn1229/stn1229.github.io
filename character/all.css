@@ -5,16 +5,21 @@
     height:100%;
     overflow-y:auto;
 }
-.backgroundfire{
+.background{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     height:100%;
-    background-color:#F4A7B9;
     background-size:cover;
     z-index:-1;
 }
+.fire{background-color:#F4A7B9;}
+.water{background-color:#51A8DD;}
+.earth{background-color:#BC9F77;}
+.wind{background-color:#91B493;}
+.light{background-color:#D9CD90;}
+.dark{background-color:#B28FCE;}
 #button{
     width:100%;
 }
