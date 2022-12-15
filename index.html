@@ -3,6 +3,7 @@
         <title>gbf-tool</title>
         <link rel="icon" href="indexicon.jpg">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src='index.global.js'></script>
         <style>
             @import "index.css";
         </style>
@@ -21,7 +22,47 @@
                     <li><a href="https://gbs.eriri.net/" class="button">舔寶網</a></li>
                 </ul>
             </header>
+            <div id="below">
+                <div id="left"></div>
 
+                <div id="middle">
+                    <h1>本月資訊</h1>
+                    <div id="calendar"></div>
+                </div>
+
+                <div id="right">
+                    <h1>官方twitter</h1>
+                    <div id="twitter">
+                        <a class="twitter-timeline" data-height="700" data-theme="dark" href="https://twitter.com/granbluefantasy?ref_src=twsrc%5Etfw">Tweets by granbluefantasy</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </body>
+    <script>
+        var calendar1=document.getElementById('calendar');
+        var calendar=new FullCalendar.Calendar(calendar1,{
+            dayMaxEvents:true,
+            height:700,
+            aspectRatio:1.1,
+            events:[
+                {
+                    title:'小古戰場',
+                    start:'2022-12-15',
+                    end:'2022-12-22',
+                    overlap:false,
+                },
+                {
+                    title:'復刻活動-灯幻連理双紙',
+                    start:'2022-12-21',
+                    end:'2022-12-28',
+                    overlap:false,
+                },
+            ]
+        });
+        calendar.render();
+    </script>
 </html>
