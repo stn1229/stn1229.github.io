@@ -206,11 +206,13 @@
             var img=document.getElementById(data);
             var imgclone=img.cloneNode(true);
             var div=event.target;
+            
             /*
             if(div.id=="w0"){
-                imgclone.style.transform="rotate(90deg)";
+                imgclone.style.transform="rotate(90deg);";
             }
             */
+
             event.currentTarget.appendChild(imgclone);
             event.currentTarget.setAttribute("data-HP",img.getAttribute("data-HP"));
             event.currentTarget.setAttribute("data-ATK",img.getAttribute("data-ATK"));
